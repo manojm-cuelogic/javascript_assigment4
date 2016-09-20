@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<script src="jquery_1.12.4.min.js"></script>
+
+<body>
+  Write a program to copy two objects. It should accept two arguments - source ( the object from which we need to copy) and target ( to which we need to copy). The target object will initially be empty.
+<br/>
+
+<p id="demo">OUTPUT printed is CONSOLE</p>
+
+
+
+</body>
+<script type="text/javascript">
+
+function cloneObject(source_obj,target_obj) {
+    if (source_obj === null || typeof source_obj !== 'object') {
+        return source_obj;
+    } 
+	
+	
+	var key ;
+
+    for ( key in source_obj )
+    {
+        // copy each property into the clone
+        target_obj[ key ] = source_obj[ key ] ;
+    }
+
+    return target_obj ;  
+}
+ 
+var source = {
+    name: "Bob",
+    age: 32
+};
+ var target = {} ;
+
+console.log(cloneObject(source,target));
+
+
+</script>
+</html>
+
+

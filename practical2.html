@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<script src="jquery_1.12.4.min.js"></script>
+
+<body>
+ Write a program to merge two objects. It should accept two arguments - objectA and objectB. The result object will have the combined values and should not change the structure of either objectA or objectB. If both objects have same properties, consider using objectA property instead.
+<br/>
+
+<p id="demo">OUTPUT printed is CONSOLE</p>
+
+<br>
+NAME is <span id="demo1"></span> and his Position is <span id="demo2"></span>
+
+</body>
+<script type="text/javascript">
+
+function extend(obj, src) {
+        for (var key in src) {
+            if (src.hasOwnProperty(key)) obj[key] = src[key];
+        }
+        return obj;
+    }
+    
+    // example
+    var a = { name: "manoj" }, b = { position: "Software Engineer" };
+    var c = extend(a, b);
+    
+    document.getElementById("demo1").innerHTML=c.name;
+    document.getElementById("demo2").innerHTML=c.position;
+    console.log(c);
+
+</script>
+</html>
+
+

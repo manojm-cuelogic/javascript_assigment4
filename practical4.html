@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<script src="jquery_1.12.4.min.js"></script>
+
+<body>
+ Extend number type to have a 'int()' function that will convert any given 'float' value to its integer equivalent. (a no such as 5.00 should become 5). The function should only return that value and should not affect the actual number's value.
+<br/>
+
+<p id="demo">OUTPUT printed is CONSOLE</p>
+
+<br>
+<input type="text" id="floatval" name="floatval">
+<br/>
+<br/>
+<input type="button" name="" value="Please click this" onclick="convertoInt();">
+<br/>
+<br/>
+Value is <span id="demo1"></span> 
+
+</body>
+<script type="text/javascript">
+function convertoInt()
+{
+var floatval = document.getElementById("floatval").value;
+
+var intvalue = parseInt(floatval);
+
+
+    
+    document.getElementById("demo1").innerHTML=intvalue;
+    
+    console.log(intvalue);
+}
+</script>
+</html>
+
+

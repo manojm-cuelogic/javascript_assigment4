@@ -1,0 +1,47 @@
+
+ <!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<body>
+ Write a program to loop through the children of a ul element(ul will have 5 li's). Loop through each of the li and attach a function on it that will alert the value of that li (html text inside the li). 
+<br/>
+
+<html>
+<head>
+</head>
+<body onload = "getdata()">
+<div id = "items">
+<ul id = "language_list">
+
+
+
+</ul>
+
+</div>
+</body>
+<script type="text/javascript">
+ 
+var langauage_arr = new Array("CSS", "javascript", "PHP", "jquery","C++");
+
+var index;
+
+function getdata(){
+	for (index = 0; index < langauage_arr.length; index++)
+	{
+		$("#language_list").append('<li id="'+index+'" onclick="getInnerdata(this.id);" style="cursor:pointer;color:blue;">'+langauage_arr[index]+'</li>'); 
+
+		//$("#language_list").append('<li id="li"> <a href="#" onclick="getInnerdata();">'+langauage_arr[index]+'</a></li>'); 
+	}
+}
+
+function getInnerdata(val_obj)
+{
+	
+	var li_val = document.getElementById(val_obj).innerHTML;
+	alert(li_val);
+
+}
+</script>
+</html>
+
